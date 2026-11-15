@@ -35,8 +35,10 @@ urlcolor=blue
 \usepackage[round,authoryear]{natbib}
 \usepackage{cleveref}
 
-\title{Analyzing solar plasma via radio waves NEED BETTER TITLE}
-\author{Nikitas Komnenos, Pranav Arunkumar, Andrew Feinstein, Joseph Girone, and Max Rothman}
+% IF YOU WANT WE CAN TRY TO CHANGE THE RED BANNER TO A STARFIELD IN MIDNGHT BLUE AND PURPLE
+
+\title{Analyzing solar plasma via radio waves}
+\author{Nikitas Komnenos, Pranav Arunkumar, Andrew Feinstein, Joseph Girone, \& Max Rothman}
 \institute{Science \& Engineering Magnet Program and Manalapan High School, Englishtown, NJ 07726}
 \date{\today}
 
@@ -47,78 +49,107 @@ urlcolor=blue
 \begin{minipage}[t][\textheight]{\linewidth}
 \begin{abstract}
 % Our high school has been provided with a dual-dipole antenna and RSP1A receiver as part  of University of Michigan's sunRISE Ground Radio Lab project. In addition to providing observations for that project, we are studying electron density as a function of distance from the sun through examination of radio signal correlated to solar phenomena.
-  Electron density is a vital property of solar plasma that can be used to infer the behavior of various solar phenomena including coronal mass ejections(CMEs) and solar wind propagation, both of which are vital for near-earth satellites and global communication.
-  This project aims to create a mathematical model to calculate the electron density as a function of distance from the sun by taking measurements of radio activity corresponding to solar phenomena.
+%Electron density of is a vital property of solar plasma that can be used to infer the behavior of various solar phenomena including coronal mass ejections(CMEs) and solar wind propagation, both of which are vital for near-earth satellites and global communication. This project aims to create a mathematical model to calculate the electron density as a function of distance from the sun by taking measurements of radio activity corresponding to solar phenomena.
+% vital property - sounds like life sign and vital overused 
+% infer the behavior - not sure what you mean here 
+% a mathematical model does not take measurements of radio activity
+Electron density plays a key role in coronal mass ejection (CME) and solar wind propagation, which can have major impacts on near-earth satellites and global communication. We are studying ways to estimate the electron density as a function of distance from the sun, using mathematical models based on radio measurements correlated with other obervations of solar phenomena. 
+% AVOID ``radio activity'' it confuses with radioactivity
 \end{abstract}
+
+
 \vfill
-\begin{block}{Dual-dipole antenna courtesy of Univ of Michigan sunRISE GRL}
-\begin{itemize}
-\item \qty{20}{\mega\hertz}, x length, dual-dipole antenna
-\item RSP1A receiver (SDRPlay, Princes Risborough, United Kingdom)
-\end{itemize}
-\begin{center}
-photo and drawing here
-\end{center}
-\end{block}
-\vfill
-\begin{block}{Plasma electron density}
-\begin{itemize}
-\item 
-words here
+% WHAT IS YOUR QUESTION
+\begin{block}{Can we estimate electron density (of what)?}
+%\begin{itemize}
+%\item Plasma electron density ($n_e$) is number of electrons per unit volume
+%\item Important to WHAT
+%\item 
+The characteristic radio frequency (is this a tone? a center? what?) is given by
 \begin{equation}
 f_p = 9000 \sqrt{n_e}, \label{eq:1}
 \end{equation}
-where $f_p$ is the frequency in \unit{\hertz} and $n_e$ is the electron density in \unit{electrons/cm^3}.
-\item Cite source for this equation
-\item Say what it means
+where $f_p$ is the frequency in \unit{\hertz} and $n_e$ is the electron density in \unit{\per\centi\meter\cubed} \cite{source}. % WHY CM??!?!
+Explain what this equation means.
+%\end{itemize}
+\end{block}
+
+\vfill
+
+% WHAT IS THE EQUPMENT YOU ARE USING
+\begin{block}{Observations with a 20 MHz dual-dipole antenna}
+\begin{itemize}
+\item x meter antenna \& receiver provided by University of Michigan sunRISE GRL project \cite{umich}. 
+\item Located at lat lon and pointed at what
+\item Signals recorded with software-defined radio receiver (RSP1A; SDRPlay; Princes Risborough, UK) connected to a Windows laptop (model, brand). Spectrograms generated using what. 
+%\begin{center}
+%photo and drawing here
+%\end{center}
 \end{itemize}
 \end{block}
-\vfill*
+
+\vspace*{\fill}
 \end{minipage}
 \end{column}
 
+
+
+
+
+
+
 \begin{column}{12in}
 \begin{minipage}[t][\textheight]{\linewidth}
-\begin{block}{Methods}
+% GIVE A HEADLINE DESCRIPTION OF HOW THE METHOD WORKS
+% e.g. Do spike events (is that a thing) correlate with other measurements of electron density 
+% this is prime real estate on poster so put a useful message here rather than the word Methods
+\begin{block}{Methods deserve a full sentence here}
 \begin{center}
-\hfill\includegraphics{figures/diagram.png}
+% Is this image AI generated?
+% Does it use imagery you did not create?
+\includegraphics[width=0.9\columnwidth]{figures/diagram.png}
 \end{center}
 \begin{itemize}
-\item We plan to run the antenna continuously for 4 weeks, with snapshots every 3 hours
+\item Record snapshots every 3 hours for 4 weeks.
 \item Detect significant spike events and calculate electron density using \cref{eq:1}
-\item $n_e$ will be used to calculate physical distance from the sun using models such as the Newkirk model and Baumbach-Aellen model CITATIONS. 
-\item Densities and distances will then be fitted to an empirical model TO DO WHAT.
+\item $n_e$ will be used to calculate physical distance from the sun using models such as the Newkirk model and Baumbach-Aellen model CITATIONS. WHAT ARE THESE. 
+\item Densities and distances will then be fitted to an empirical model TO DO WHAT. Does this require someone else's measurement of $n_e$ in LEO for example. Is the main thing you are modelling correlation between the two (with some appropriate phase delay) so that you are measuring the same thing, and some correction for distance and spreading. 
 \end{itemize}
-\begin{center}
-picture here
-\end{center}
-\hfill\includegraphics[height=2in]{figures/se-logo-square.png}
 \end{block}
 \end{minipage}
 \end{column}
 
+
+
+
+
+
 \begin{column}{12in}
 \begin{minipage}[t][\textheight]{\linewidth}
-\begin{block}{Overall results}
+\begin{block}{Getting our feet wet with our very first observations}
+% BETTER TO SAY WHAT IT SHOWS
 \begin{center}
-\hfill\includegraphics[height=5in]{figures/example_graph.png}
+% Remove the distracting overlays
+\includegraphics[width=0.9\columnwidth]{figures/example_graph.png}
 \end{center}
 \begin{itemize}
 \item blurbage here
 \end{itemize}
 \end{block}
+
 \vfill
-\begin{block}{References here}
-\begin{itemize}
-\item blurbage
-\end{itemize}
+
+%\hfill\includegraphics[height=2in]{figures/se-logo-square.png}
+\begin{block}{} %Acknowledgements} % Make this small
+We thank C~Bennett, J~Komitas, Dr P~Woloniansky, Dr~Evangelista, University of Michigan, the sunRISE Project, Manalapan High School Science \& Engineering. Contact authors: \href{mailto:428parunkumar@frhsd.com}{\texttt{428parunkumar@frhsd.com}} and \href{mailto:428nkomnenos@frhsd.com}{\texttt{428nkomnenos@frhsd.com}}
 \end{block}
+% SOMETIMES PEOPLE PUT A QR CODE HERE OR S&E LOGO
+
 \vfill
-\begin{block}{} %Acknowledgements}
-We thank C~Bennett, J~Komitas, Dr P~Woloniansky, Dr~Evangelista, University of Michigan, the sunRISE Project, Manalapan High School Science \& Engineering. Contact authors: \href{mailto:428parunkumar@frhsd.com}{\texttt{428parunkumar@frhsd.com}}
-\href{mailto:428nkomnenos@frhsd.com}{\texttt{428nkomnenos@frhsd.com}}
+
+\begin{block}{} %References}
+Do references here using bibtex. It can be very small. 
 \end{block}
-\vfill*
 \end{minipage}
 \end{column}
 \end{columns}
