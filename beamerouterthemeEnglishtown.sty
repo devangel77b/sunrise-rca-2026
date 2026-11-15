@@ -1,0 +1,122 @@
+%It's easy to imagine what color and font themes do. inner themes define how elements inside a slide (items, enumerate, blocks, ...) look while outer themes define headlines, footlines, sidebar, ...
+
+\mode<presentation>
+
+%% headlines
+\setbeamertemplate{headline}{
+%\leavevmode
+\begin{beamercolorbox}{headline}
+\begin{minipage}[c][5in][c]{\paperwidth}
+\begin{columns}
+\begin{column}{\paperwidth}
+\begin{minipage}{4in}
+\hspace{0.5in}\includegraphics[height=3in]{figures/mnhs-logo.png}
+\end{minipage}
+\hspace{1in}
+\begin{minipage}[c][4in][c]{0.8\paperwidth}
+\noindent\veryHuge{\textbf{\inserttitle}}\\
+\noindent\LARGE{\insertauthor}\\
+\noindent\Large{\insertinstitute}
+\end{minipage}
+\end{column}
+\end{columns}
+\end{minipage}
+\end{beamercolorbox}
+}
+
+%%\leavevmode
+%%
+%%\begin{beamercolorbox}[leftskip=0in]{headline}
+%%\begin{columns}[c]
+%%\begin{column}{0.65\paperwidth}
+%%\usebeamercolor{title in headline}{\color{fg}\textbf{\veryHuge{\inserttitle}}\\[1ex]}
+%%\vskip1ex
+%%\usebeamercolor{author in headline}{\color{fg}\Large{\insertauthor}\\[1ex]}
+%%%\usebeamercolor{institute in headline}{\color{fg}\large{\insertinstitute}\\[1ex]}     
+%%\end{column}
+%%\begin{column}{0.33\paperwidth}
+%%\begin{center}
+%%\includegraphics[width=\columnwidth]{cropped-RCE-logo-01.png}
+%%\end{center}
+%%\end{column}
+%%\end{columns}
+%%\end{beamercolorbox}
+%%%\begin{beamercolorbox}[wd=\paperwidth]{headline}
+%%%    \begin{columns}[T]
+%%%      \begin{column}{.02\paperwidth}
+%%%      \end{column}
+%%%      \begin{column}{.07\paperwidth}
+%%%        \begin{center}
+%%%          %\includegraphics[width=.6\linewidth]{logos/i6-hks44}
+%%%        \end{center}
+%%%        \vskip1ex
+%%%      \end{column}
+%%      \begin{column}{.675\paperwidth}
+%%        \vskip4ex
+%%        \raggedleft
+%%        \usebeamercolor{title in headline}{\color{fg}\textbf{\LARGE{\inserttitle}}\\[1ex]}
+%%        \usebeamercolor{author in headline}{\color{fg}\large{\insertauthor}\\[1ex]}
+%%        \usebeamercolor{institute in headline}{\color{fg}\large{\insertinstitute}\\[1ex]}     
+%%      \end{column}
+%%      \begin{column}{.25\paperwidth}
+%%        \vskip1cm
+%%        \begin{center}
+%%          \includegraphics[width=.7\linewidth]{RCE-logo.pdf}
+%%        \end{center}
+%%        \vskip1.5cm
+%%      \end{column}
+%%      \begin{column}{.03\paperwidth}
+%%      \end{column}
+%%    \end{columns}
+%%  \end{beamercolorbox}
+%%  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
+%%    \rule{0pt}{0.25in}
+%%  \end{beamercolorbox}
+%%}
+%
+%%  \setbeamertemplate{headline}{  
+%%    \leavevmode
+%%    \begin{beamercolorbox}[sep=0.5cm,wd=.8\paperwidth]{headline}
+%%      \usebeamercolor{title in headline}{\raggedleft\color{fg}\textbf{\LARGE{\inserttitle}}\\[1ex]}
+%%      \usebeamercolor{author in headline}{\raggedleft\color{fg}\large{\insertauthor}\\[1ex]}
+%%      \usebeamercolor{institute in headline}{\raggedleft\color{fg}\large{\insertinstitute}\\[1ex]}     
+%%    \end{beamercolorbox}%
+%%    \begin{beamercolorbox}[wd=.2\paperwidth]{logo in headline}
+%%      \centering
+%%      \LARGE{LOGO}
+%%    \end{beamercolorbox}  
+%
+%
+%%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{footline}{
+}
+
+%  \begin{beamercolorbox}[wd=\paperwidth]{upper separation line foot}
+%    \rule{0pt}{2pt}
+%  \end{beamercolorbox}
+%  
+%  \leavevmode%
+%  \begin{beamercolorbox}[ht=4ex,leftskip=1cm,rightskip=1cm]{author in head/foot}%
+%    \texttt{http://www-i6.informatik.rwth-aachen.de}
+%    \hfill
+%    \texttt{\{dreuw,deselaers\}@cs.rwth-aachen.de}
+%    \vskip1ex
+%  \end{beamercolorbox}
+%  \vskip0pt%
+%  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line foot}
+%    \rule{0pt}{2pt}
+%  \end{beamercolorbox}
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Display a grid to help align images ... and it looks nice with this color scheme
+%\beamertemplategridbackground[1cm]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% footlines
+
+% no frame title
+
+\mode<all>

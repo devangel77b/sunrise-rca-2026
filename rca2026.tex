@@ -1,0 +1,123 @@
+\documentclass[pdf]{beamer}
+
+\usepackage[orientation=poster,size=custom,width=91.44,height=60.96,scale=1.2,debug]{beamerposter}
+
+\mode<presentation>{
+\usetheme{Englishtown}
+}
+
+%\usepackage[utf8]{inputenc}
+%\usepackage[urw-garamond]{mathdesign}
+%\usepackage[T1]{fontenc}
+%\usepackage{ebgaramond}
+\usepackage{booktabs}
+\usepackage{fancyref}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\sisetup{separate-uncertainty=true}
+\usepackage{listings}
+\usepackage{hyperref} % covered with beamer?
+\hypersetup{
+colorlinks=true,
+urlcolor=blue
+}
+\usepackage[export]{adjustbox}
+\usepackage{svg}
+\usepackage{amsmath,amsthm,amssymb}
+%\boldmath
+% Uncomment next line to restore figure numbers if you like that sort of thing
+\setbeamertemplate{caption}[numbered]
+
+% if using ieee style citations
+%\usepackage{cite}
+% or uncomment next line for biology style references
+\usepackage[round,authoryear]{natbib}
+\usepackage{cleveref}
+
+\title{Analyzing solar plasma via radio waves NEED BETTER TITLE}
+\author{Nikitas Komnenos, Pranav Arunkumar, Andrew Feinstein, Joseph Girone, and Max Rothman}
+\institute{Science \& Engineering Magnet Program and Manalapan High School, Englishtown, NJ 07726}
+\date{\today}
+
+\begin{document}
+\begin{frame}{}
+\begin{columns}[T,totalwidth=\textwidth]
+\begin{column}{12in}
+\begin{minipage}[t][\textheight]{\linewidth}
+\begin{abstract}
+Our high school has been provided with a dual-dipole antenna and RSP1A receiver as part  of University of Michigan's sunRISE Ground Radio Lab project. In addition to providing observations for that project, we are studying electron density as a function of distance from the sun through examination of radio signal correlated to solar phenomena.
+\end{abstract}
+\vfill
+\begin{block}{Dual-dipole antenna courtesy of Univ of Michigan sunRISE GRL}
+\begin{itemize}
+\item \qty{20}{\mega\hertz}, x length, dual-dipole antenna
+\item RSP1A receiver (manufacturer, location)
+\end{itemize}
+\begin{center}
+photo and drawing here
+\end{center}
+\end{block}
+\vfill
+\begin{block}{Plasma electron density}
+\begin{itemize}
+\item 
+words here
+\begin{equation}
+f_p = 9000 \sqrt{n_e}, \label{eq:1}
+\end{equation}
+where $f_p$ is the frequency in \unit{\hertz} and $n_e$ is the electron density in UNITS
+\item Cite source for this equation
+\item Say what it means
+\end{itemize}
+\end{block}
+\vfill*
+\end{minipage}
+\end{column}
+
+\begin{column}{12in}
+\begin{minipage}[t][\textheight]{\linewidth}
+\begin{block}{Methods}
+\begin{center}
+pretty picture here
+\end{center}
+\begin{itemize}
+\item We plan to run the antenna continuously for 4 weeks, with snapshots every 3 hours
+\item Detect significant spike events and calculate electron density using \cref{eq:1}
+\item $n_e$ will be used to calculate physical distance from the sun using models such as the Newkirk model and Baumbach-Aellen model CITATIONS. 
+\item Densities and distances will then be fitted to an empirical model TO DO WHAT.
+\end{itemize}
+\begin{center}
+picture here
+\end{center}
+\hfill\includegraphics[height=2in]{figures/se-logo-square.png}
+\end{block}
+\end{minipage}
+\end{column}
+
+\begin{column}{12in}
+\begin{minipage}[t][\textheight]{\linewidth}
+\begin{block}{Overall results}
+\begin{center}
+picture here
+\end{center}
+\begin{itemize}
+\item blurbage here
+\end{itemize}
+\end{block}
+\vfill
+\begin{block}{References here}
+\begin{itemize}
+\item blurbage
+\end{itemize}
+\end{block}
+\vfill
+\begin{block}{} %Acknowledgements}
+We thank C~Bennett, J~Komitas, Dr P~Woloniansky, Dr~Evangelista, Manalapan High School Science \& Engineering. Contact author: \href{mailto:428parunkumar@frhsd.com}{\texttt{428parunkumar@frhsd.com}}
+\end{block}
+\vfill*
+\end{minipage}
+\end{column}
+\end{columns}
+\end{frame}
+\end{document}

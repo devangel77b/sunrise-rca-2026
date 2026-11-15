@@ -1,0 +1,45 @@
+%It's easy to imagine what color and font themes do. inner themes define how elements inside a slide (items, enumerate, blocks, ...) look while outer themes define headlines, footlines, sidebar, ...
+
+\mode<presentation>
+
+\setbeamertemplate{background}{
+}
+
+
+
+
+\setbeamertemplate{block begin}{
+\begin{beamercolorbox}[leftskip=0in,colsep=0.25in]{block title}%
+%\vskip1ex
+\usebeamerfont*{block title}\insertblocktitle
+%\vskip1ex
+\end{beamercolorbox}%
+{\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
+\usebeamerfont{block body}%
+\begin{beamercolorbox}[vmode,colsep=0.25in]{block body}%
+\ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+}
+
+  
+\setbeamertemplate{block end}{
+\end{beamercolorbox}
+}
+
+\setbeamertemplate{blocks}[rounded=true,shadow=true]
+
+
+\setbeamertemplate{abstract title}{
+\usebeamerfont{abstract title}Abstract: }
+
+\setbeamertemplate{abstract begin}{
+\usebeamerfont{block body}
+\begin{beamercolorbox}[leftskip=0in,colsep=0.25in,vmode]{block body}
+\vskip1ex
+}
+
+\setbeamertemplate{abstract end}{
+\end{beamercolorbox}
+}
+
+\mode
+<all>

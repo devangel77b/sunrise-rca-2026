@@ -1,0 +1,28 @@
+\ProvidesPackage{beamerthemeEnglishtown}
+
+\mode<presentation>
+
+% requirements
+\RequirePackage{tikz}
+
+% settings
+\useinnertheme{Englishtown}
+\useoutertheme{Englishtown}
+\usecolortheme{Englishtown}
+\usefonttheme{default}
+\RequirePackage{helvet}
+%\RequirePackage{mathptmx}
+%\RequirePackage[urw-garamond]{mathdesign}
+%\RequirePackage[T1]{fontenc}
+%\RequirePackage{ebgaramond}
+
+\setbeamertemplate{navigation symbols}{}  % no navigation on a poster
+
+\setbeamertemplate{itemize items}[circle]
+
+%\setbeamertemplate{bibliography item}{} % no symbols in bib
+\setbeamertemplate{bibliography item}{\insertbiblabel} % numbers in bib
+
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+
+\mode<all>
