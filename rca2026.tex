@@ -46,13 +46,15 @@ urlcolor=blue
 \begin{column}{12in}
 \begin{minipage}[t][\textheight]{\linewidth}
 \begin{abstract}
-Our high school has been provided with a dual-dipole antenna and RSP1A receiver as part  of University of Michigan's sunRISE Ground Radio Lab project. In addition to providing observations for that project, we are studying electron density as a function of distance from the sun through examination of radio signal correlated to solar phenomena.
+% Our high school has been provided with a dual-dipole antenna and RSP1A receiver as part  of University of Michigan's sunRISE Ground Radio Lab project. In addition to providing observations for that project, we are studying electron density as a function of distance from the sun through examination of radio signal correlated to solar phenomena.
+  Electron density is a vital property of solar plasma that can be used to infer the behavior of various solar phenomena including coronal mass ejections(CMEs) and solar wind propagation, both of which are vital for near-earth satellites and global communication.
+  This project aims to create a mathematical model to calculate the electron density as a function of distance from the sun by taking measurements of radio activity corresponding to solar phenomena.
 \end{abstract}
 \vfill
 \begin{block}{Dual-dipole antenna courtesy of Univ of Michigan sunRISE GRL}
 \begin{itemize}
 \item \qty{20}{\mega\hertz}, x length, dual-dipole antenna
-\item RSP1A receiver (manufacturer, location)
+\item RSP1A receiver (SDRPlay, Princes Risborough, United Kingdom)
 \end{itemize}
 \begin{center}
 photo and drawing here
@@ -66,7 +68,7 @@ words here
 \begin{equation}
 f_p = 9000 \sqrt{n_e}, \label{eq:1}
 \end{equation}
-where $f_p$ is the frequency in \unit{\hertz} and $n_e$ is the electron density in UNITS
+where $f_p$ is the frequency in \unit{\hertz} and $n_e$ is the electron density in \unit{electrons/cm^3}.
 \item Cite source for this equation
 \item Say what it means
 \end{itemize}
@@ -79,7 +81,7 @@ where $f_p$ is the frequency in \unit{\hertz} and $n_e$ is the electron density 
 \begin{minipage}[t][\textheight]{\linewidth}
 \begin{block}{Methods}
 \begin{center}
-pretty picture here
+\hfill\includegraphics{figures/diagram.png}
 \end{center}
 \begin{itemize}
 \item We plan to run the antenna continuously for 4 weeks, with snapshots every 3 hours
@@ -99,7 +101,7 @@ picture here
 \begin{minipage}[t][\textheight]{\linewidth}
 \begin{block}{Overall results}
 \begin{center}
-picture here
+\hfill\includegraphics[height=5in]{figures/example_graph.png}
 \end{center}
 \begin{itemize}
 \item blurbage here
@@ -113,7 +115,8 @@ picture here
 \end{block}
 \vfill
 \begin{block}{} %Acknowledgements}
-We thank C~Bennett, J~Komitas, Dr P~Woloniansky, Dr~Evangelista, Manalapan High School Science \& Engineering. Contact author: \href{mailto:428parunkumar@frhsd.com}{\texttt{428parunkumar@frhsd.com}}
+We thank C~Bennett, J~Komitas, Dr P~Woloniansky, Dr~Evangelista, University of Michigan, the sunRISE Project, Manalapan High School Science \& Engineering. Contact authors: \href{mailto:428parunkumar@frhsd.com}{\texttt{428parunkumar@frhsd.com}}
+\href{mailto:428nkomnenos@frhsd.com}{\texttt{428nkomnenos@frhsd.com}}
 \end{block}
 \vfill*
 \end{minipage}
