@@ -29,10 +29,11 @@ urlcolor=blue
 % Uncomment next line to restore figure numbers if you like that sort of thing
 \setbeamertemplate{caption}[numbered]
 
-% if using ieee style citations
-%\usepackage{cite}
-% or uncomment next line for biology style references
-\usepackage[round,authoryear]{natbib}
+% For bibliographies
+%\usepackage[backend=biber,style=apa]{biblatex}
+%\addbibresource{references/sunrise.bib}
+\usepackage{cite} % this is an IEEE conference
+%\usepackage[round,authoryear]{natbib}
 \usepackage{cleveref}
 
 % IF YOU WANT WE CAN TRY TO CHANGE THE RED BANNER TO A STARFIELD IN MIDNGHT BLUE AND PURPLE||| Yes; that would be much better
@@ -77,12 +78,12 @@ The characteristic radio frequency of Langmuir waves produced by the solar plasm
 \begin{equation}
 f_p = 9000 \sqrt{n_e}, \label{eq:1}
 \end{equation}
-where $f_p$ is the frequency in \unit{\hertz} and $n_e$ is the electron density in \unit{\per\centi\meter\cubed} \cite{source}. % WHY CM??!?!
+where $f_p$ is the frequency in \unit{\hertz} and $n_e$ is the electron density in \unit{\per\centi\meter\cubed} \cite{White2023Extreme}. % WHY CM??!?!
 %cite the source "Extreme Solar Radio Bursts" Stephen White; https://baas.aas.org/pub/2023n3i429/release/1
 % find details as needed
 
 %\end{itemize}
-At frequencies below 500MHz, most solar spectrographs will be dominated by plasma emissions whose mechanisms follow \cref{eq:1} \cite{source}. %cite the source "Extreme Solar Radio Bursts" Stephen White; https://baas.aas.org/pub/2023n3i429/release/1
+At frequencies below 500MHz, most solar spectrographs will be dominated by plasma emissions whose mechanisms follow \cref{eq:1} \cite{White2023Extreme}. %cite the source "Extreme Solar Radio Bursts" Stephen White; https://baas.aas.org/pub/2023n3i429/release/1
 % find details as needed
 \end{block}
 
@@ -90,10 +91,10 @@ At frequencies below 500MHz, most solar spectrographs will be dominated by plasm
 
 \begin{block}{Observations with a 20 MHz dual-dipole antenna}
 \begin{itemize}
-\item 7.32x6.10 meter dual-dipole antenna \& RSP1A receiver provided by University of Michigan sunRISE GRL project \cite{umich}. %cite from the antenna installation guide directly
+\item 7.32x6.10 meter dual-dipole antenna \& RSP1A receiver provided by University of Michigan sunRISE GRL project \cite{AkhavanTafti2025SunRISE}. %cite from the antenna installation guide directly
 % https://drive.google.com/file/d/1yz0YadIpMocRpYuRqHXv8-ruy0lSpR2Y/view
 \item Setup in Monmouth County, NJ and aligned with respect to the cardinal directions, with a phase delay cable deployed facing the southern side.  %have deliberately left location blank; unsure of where the antenna will eventually be left setup
-\item Signals recorded with software-defined radio receiver (RSP1A; SDRPlay; Princes Risborough, UK) connected to a Linux laptop (Acer Travelmate P633-M).
+\item Signals recorded with software-defined radio receiver (RSP1A; SDRPlay; Princes Risborough, UK) connected to a Linux laptop (Acer Travelmate P633-M). % WHAT SOFTWARE TO RECORD AND GET SPECTROGRAM
 %\begin{center}
 %photo and drawing here
 %\end{center}
@@ -122,7 +123,7 @@ At frequencies below 500MHz, most solar spectrographs will be dominated by plasm
 \item Record spectrograph snapshots every 3 hours for 4 weeks.
   \item Detect significant spike events and calculate electron density using \cref{eq:1}
   \item find independent measurements of electron densities from various databases(NASA OMNIWeb, etc.) and calculate the difference
-        \item Use models that predict electron densities as a function of distance such as Newkirk Model and Baumbach-Aellen to find the predicted change in plasma density \cite{source2}
+        \item Use models that predict electron densities as a function of distance such as Newkirk Model and Baumbach-Aellen to find the predicted change in plasma density \cite{Soni2026Closed,Benkevitch2011Method}
         % For the Newkirk Model, cite this link: https://link.springer.com/article/10.1007/s10509-026-04639-4 (there is a cite button, but I don't know what format)
         % For the Baumbach-Aellen model, cite this paper: https://arxiv.org/pdf/1110.2516
         \item The predicted and actual differences will be used to compute a correction factor that will be used in addition to the densities and distances to be fitted to an empirical model.
@@ -157,8 +158,13 @@ We thank C~Bennett, J~Komitas, Dr P~Wolniansky, Dr~Evangelista, University of Mi
 \end{block}
 % SOMETIMES PEOPLE PUT A QR CODE HERE OR S&E LOGO
 
-% \begin{block}{} %References}
 % Do references here using bibtex. It can be very small.
+\begin{block}{} %References}
+\tiny
+\bibliographystyle{IEEEtran}
+\bibliography{references/sunrise.bib}
+\end{block}
+\vspace*{\fill}
 \end{minipage}
 \end{column}
 \end{columns}
