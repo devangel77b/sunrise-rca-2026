@@ -58,43 +58,27 @@ Electron density plays a key role in coronal mass ejection (CME) and solar wind 
 % AVOID ``radio activity'' it confuses with radioactivity
 \end{abstract}
 
-
-% TODO: insert picture setup and label setup
-%
-\begin{center}
-% Remove the distracting overlays
-\includegraphics[width=0.9\columnwidth]{figures/setup.png}
-\end{center}
-
-
 \vfill
 % WHAT IS YOUR QUESTION
 \begin{block}{Can we estimate electron density of solar plasma?}
-%\begin{itemize}
-%\item Plasma electron density ($n_e$) is number of electrons per unit volume
-%\item Important to WHAT
-%\item 
 The characteristic radio frequency of Langmuir waves produced by the solar plasma is given by
 \begin{equation}
 f_p = 9000 \sqrt{n_e}, \label{eq:1}
 \end{equation}
-where $f_p$ is the frequency in \unit{\hertz} and $n_e$ is the electron density in \unit{\per\centi\meter\cubed} \cite{White2023Extreme}. % WHY CM??!?!
-%cite the source "Extreme Solar Radio Bursts" Stephen White; https://baas.aas.org/pub/2023n3i429/release/1
-% find details as needed
-
-%\end{itemize}
-At frequencies below 500MHz, most solar spectrographs will be dominated by plasma emissions whose mechanisms follow \cref{eq:1} \cite{White2023Extreme}. %cite the source "Extreme Solar Radio Bursts" Stephen White; https://baas.aas.org/pub/2023n3i429/release/1
-% find details as needed
+where $f_p$ is the frequency in \unit{\hertz} and $n_e$ is the electron density in \unit{\per\centi\meter\cubed} \cite{White2023Extreme}.
 \end{block}
 
 \vfill
 
+\begin{center}
+% Remove the distracting overlays
+\includegraphics[width=0.33\columnwidth]{figures/setup.png}
+\end{center}
 \begin{block}{Observations with a 20 MHz dual-dipole antenna}
 \begin{itemize}
-\item 7.32x6.10 meter dual-dipole antenna \& RSP1A receiver provided by University of Michigan sunRISE GRL project \cite{AkhavanTafti2025SunRISE}. %cite from the antenna installation guide directly
-% https://drive.google.com/file/d/1yz0YadIpMocRpYuRqHXv8-ruy0lSpR2Y/view
-\item Setup in Monmouth County, NJ and aligned with respect to the cardinal directions, with a phase delay cable deployed facing the southern side.  %have deliberately left location blank; unsure of where the antenna will eventually be left setup
-\item Signals recorded with software-defined radio receiver (RSP1A; SDRPlay; Princes Risborough, UK) connected to a Linux laptop (Acer Travelmate P633-M). % WHAT SOFTWARE TO RECORD AND GET SPECTROGRAM
+\item \qtyproduct{7.3x6.1}{\meter} dual-dipole antenna \& RSP1A receiver provided by University of Michigan sunRISE GRL project \cite{AkhavanTafti2025SunRISE}. 
+\item Daytime observations in Monmouth County, NJ, w phase delay cable on southern antenna element.
+%\item  % WHAT SOFTWARE TO RECORD AND GET SPECTROGRAM
 %\begin{center}
 %photo and drawing here
 %\end{center}
@@ -114,20 +98,25 @@ At frequencies below 500MHz, most solar spectrographs will be dominated by plasm
 % e.g. Do spike events (is that a thing) correlate with other measurements of electron density 
 % this is prime real estate on poster so put a useful message here rather than the word Methods
 \begin{block}{Recording and analyzing spectrographs to create an empirical model}
+
+\vspace{1in}
+
 \begin{center}
 % Is this image AI generated?
 % Does it use imagery you did not create?
 \includegraphics[width=0.9\columnwidth]{figures/diagram.png} % TODO: cite this diagram as AI
 \end{center}
+
+\vspace{1in}
+
 \begin{itemize}
-\item Record spectrograph snapshots every 3 hours for 4 weeks.
-  \item Detect significant spike events and calculate electron density using \cref{eq:1}
-  \item find independent measurements of electron densities from various databases(NASA OMNIWeb, etc.) and calculate the difference
-        \item Use models that predict electron densities as a function of distance such as Newkirk Model and Baumbach-Aellen to find the predicted change in plasma density \cite{Soni2026Closed,Benkevitch2011Method}
+\item Record spectrograph snapshots every \qty{3}{\hour} for \qty{4}{w}. Signals are recorded with a software-defined radio receiver (RSP1A; SDRPlay; Princes Risborough, UK) connected to a Linux laptop (Acer Travelmate P633-M).
+\item Detect significant spike events and calculate $n_e$ using \cref{eq:1}
+\item Find independent measurements of $n_e$ from various databases(NASA OMNIWeb, etc.) and calculate the differences.
+\item Use models that predict $n_e$ as a function of distance, such as Newkirk  \cite{Soni2026Closed} or Baumbach-Aellen \cite{Benkevitch2011Method}, to estimate change in plasma density from near sun to near earth.
         % For the Newkirk Model, cite this link: https://link.springer.com/article/10.1007/s10509-026-04639-4 (there is a cite button, but I don't know what format)
         % For the Baumbach-Aellen model, cite this paper: https://arxiv.org/pdf/1110.2516
-        \item The predicted and actual differences will be used to compute a correction factor that will be used in addition to the densities and distances to be fitted to an empirical model.
-
+\item The predicted and actual differences will be used to compute a correction factor that will be used in addition to the densities and distances to be fitted to an empirical model.
 \end{itemize}
 \end{block}
 \end{minipage}
@@ -137,34 +126,28 @@ At frequencies below 500MHz, most solar spectrographs will be dominated by plasm
 
 \begin{column}{12in}
 \begin{minipage}[t][\textheight]{\linewidth}
-\begin{block}{Expected Results}
+\begin{block}{Expected results (study has just begun)}
 \begin{center}
 % Remove the distracting overlays
 \includegraphics[width=0.9\columnwidth]{figures/example_graph.png} % TODO: replace this image IMMEDIATELY
 \end{center}
+We predict:
 \begin{itemize}
-\item Given that this is only a project proposal and that we have not actually performed the study yet, we can only predict the following:
-\item the fitted model will follow some sort of exponential decay model
-\item Our calculated electron densities should be marginally higher than what is recorded in NASA databases such as Parker Solar Probe(PSP) and OMNIWeb, since our detected signals originate closer to the sun.
-
+\item The fitted model will follow some sort of exponential decay model;
+\item Our calculated $n_e$ should be marginally higher than what is recorded in NASA databases such as Parker Solar Probe(PSP) and OMNIWeb, since our detected signals originate closer to the sun.
 \end{itemize}
 \end{block}
 
-\vfill
-
 %\hfill\includegraphics[height=2in]{figures/se-logo-square.png}
 \begin{block}{} %Acknowledgements} % Make this small
-We thank C~Bennett, J~Komitas, Dr P~Wolniansky, Dr~Evangelista, University of Michigan, the sunRISE Project, Manalapan High School Science \& Engineering. Contact authors: \href{mailto:428parunkumar@frhsd.com}{\texttt{428parunkumar@frhsd.com}} and \href{mailto:428nkomnenos@frhsd.com}{\texttt{428nkomnenos@frhsd.com}}
-\end{block}
-% SOMETIMES PEOPLE PUT A QR CODE HERE OR S&E LOGO
+We thank C~Bennett, J~Komitas, Dr P~Wolniansky, Dr~Evangelista, University of Michigan, the sunRISE Project, Manalapan High School Science \& Engineering. Contact authors: \href{mailto:428parunkumar@frhsd.com}{\texttt{428parunkumar@frhsd.com}} and \href{mailto:428nkomnenos@frhsd.com}{\texttt{428nkomnenos@frhsd.com}}.
 
-% Do references here using bibtex. It can be very small.
-\begin{block}{} %References}
+\begin{minipage}[t][]{11in}
 \tiny
 \bibliographystyle{IEEEtran}
 \bibliography{references/sunrise.bib}
+\end{minipage}
 \end{block}
-\vspace*{\fill}
 \end{minipage}
 \end{column}
 \end{columns}
