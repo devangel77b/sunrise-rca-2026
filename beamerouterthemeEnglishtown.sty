@@ -5,7 +5,15 @@
 %% headlines
 \setbeamertemplate{headline}{
 %\leavevmode
-\begin{beamercolorbox}{headline}
+%\begin{beamercolorbox}{headline}
+\begin{tcolorbox}[
+  enhanced,
+  width=36in,
+  height=4in,
+  interior style={fill overzoom image=figures/background.jpg},
+  colframe=black,
+  coltext=white
+  ]
 \begin{minipage}[c][5in][c]{\paperwidth}
 \begin{columns}
 \begin{column}{\paperwidth}
@@ -21,7 +29,8 @@
 \end{column}
 \end{columns}
 \end{minipage}
-\end{beamercolorbox}
+%\end{beamercolorbox}
+\end{tcolorbox}
 }
 
 %%\leavevmode
